@@ -1,8 +1,7 @@
-import { sign } from 'jsonwebtoken'                          //funcao resp  p gerar o token
+import { generateAcessToken } from "../../utils/auth"                          
 
 let users = []
 
-const generateAcessToken =(data) => sign(data, 'secret')
 
 const getUserByEmail = (searchEmail) => 
 users.find((obj) => obj.email === searchEmail)
